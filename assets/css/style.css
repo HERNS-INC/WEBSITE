@@ -54,16 +54,16 @@ body {
 
 .navbar-2 {
   display: flex;
-  gap: 10px; /* Space between links */
-  padding-top: 10px; /* Adjust this value as needed */
+  gap: 80px; /* Space between links */
+  /* Adjust this value as needed */
   
 }
 
 .navbar-2 a {
   text-decoration: none;
-  color: #ece5e5; /* Link color */
+  color: #161915; /* Link color */
   padding: 10px 15px;
-  /* You can also add margin if needed */  
+  
 }
 
 .navbar-2 a:hover {
@@ -84,7 +84,7 @@ body {
     gap: 10px;
     padding: 12px 24px;
     background-color: var(--secondary-400);
-    border: radius 0;
+    border-radius: 16px;
     border: none;
     color: #000000;
     font-family: "Inter-SemiBold", Helvetica, sans-serif;
@@ -92,7 +92,7 @@ body {
     font-size: 18px;
     cursor: pointer; /* Ensure it looks clickable */
     transition: background-color 0.3s; /* Smooth hover effect */
-    margin-top: 400px; /* Adjust this value as needed */
+    margin-top: 0px; /* Adjust this value as needed */
 }
 
 .signup-button .overlap-group {
@@ -130,8 +130,24 @@ body {
         border-radius: 8px; 
         height: 100vh; /* Set height to full viewport height */
         overflow-y: auto; /* Allow scrolling if content exceeds height */
+        gap: 20px; /* Reduce the gap between menu items */
+    
+    }
+   
+    .navbar-2 a {
+          text-decoration: none;
+          color: #ffffff;
+          padding: 5px 10px; /* Reduced padding for closer spacing */
+          margin-bottom: 8px; /* Space at the top of the links */
+        }
+
+  .navbar-2 a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
     }
     
+    .signup-button {
+      margin-top: 80px; /* Adjust this value as needed */
+  }
 
     .navbar-2.active {
         transform: translateX(250px); /* Slide in to view */
