@@ -1,0 +1,17 @@
+:root {
+    --primary-50: rgba(238, 252, 253, 1);
+    --secondary-950: rgba(22, 42, 9, 1);
+    --primary-950: rgba(14, 47, 62, 1);
+    --secondary-400: rgba(141, 213, 70, 1);
+    --text-small-normal-font-family: "Roboto", Helvetica;
+    --text-small-normal-font-weight: 400;
+    --text-small-normal-font-size: 14px;
+    --text-small-normal-letter-spacing: 0px;
+    --text-small-normal-line-height: 150%;
+    --text-small-normal-font-style: normal;
+    --variable-collection-brand-black: rgba(22, 25, 21, 1);
+    --variable-collection-brand-black-duplicate: rgba(22, 25, 21, 1);
+    --primitives-color-grey-700: rgba(74, 85, 104, 1);
+    --primitives-color-grey-900: rgba(26, 32, 44, 1);
+    --variable-collection-brand-black: rgba(22, 25, 21, 1);
+  }
