@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,300;1,500&display=swap');
+
 :root {
     --primary-50: rgba(238, 252, 253, 1);
     --secondary-950: rgba(22, 42, 9, 1);
@@ -5,6 +8,8 @@
     --secondary-400: rgba(141, 213, 70, 1);
      --secondary-800: rgb(128, 177, 80);
     --text-small-normal-font-family: "Roboto", Helvetica, sans-serif;
+    --text-title:"Poppins", sans-serif;
+    --text-content:"Prompt", sans-serif;
     --text-small-normal-font-weight: 400;
     --text-small-normal-font-size: 14px;
     --text-small-normal-letter-spacing: 0px;
@@ -20,6 +25,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .contact-title h2{
+    color: #0E2F3E;
+    font-size: 32px;
+    font-weight: 700;
+    font:var(--text-title)
+  }
+
+  .contact-title p{
+    max-width: 650px;
+    font-family:var(--text-content);
+    font-weight: 300;
   }
 
   @media (max-width: 768px){
