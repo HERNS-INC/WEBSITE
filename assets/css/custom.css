@@ -34,13 +34,14 @@
     color: var(--text-title-color);
     font-size: 32px;
     font-weight: 700;
-    font-family;:var(--text-title-font)
+    font-family:var(--text-title-font)
   }
 
   .contact-title p{
     max-width: 650px;
     font-family:var(--text-content-font);
     font-weight: 300;
+    text-align: center;
   }
 
   .contact-form{

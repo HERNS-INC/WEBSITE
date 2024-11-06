@@ -30,9 +30,236 @@
             </nav>
         </header>
         <!-- WHITELIST FORM MAIN -->
-        <main>
-            <div>
+        <main class="container">
+            <div class="Whitelist-grid">
+                <!-- SIDE BAR  -->
+                <div class="Whitelist-sidebar">
+                    <!-- SIDEBAR NUMBERING -->
+                    <div class="whitelist-numbering">
+                        <div class="number-container">
+                            <div class="vertical-line"></div>
+                            <ul class="numbers">
+                                <li id="1">
+                                    <p>1</p>
+                                </li>
+                                <li id="2">
+                                    <p>2</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- SIDEBAR ITEMS -->
+                    <div class="whitelist-items">
+                        <ul class="whitelist-item-container">
+                            <li id="whitelist-item-1">
+                                <h4>Tell us about your company</h4>
+                                <p>Let’s know about your company to help us provide a betterb experience for you</p>
+                            </li>
+                            <li id="whitelist-item-2">
+                                <h4>Add salary settings</h4>
+                                <p>Add your salary settings here. Add your salary breakdown so that you never have to compute it again.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="whitelist-main">
+                    <!-- FORM 1 -->
+                    <form id="Whitelist-form-1">
+                        <div class="Whitelist-title">
+                            <h2>Create an Account</h2>
+                        </div>
+
+                        <!-- RADIO SELECTION -->
+                        <div>
+                            <ul class="Whitelist-selection">
+                                <li class="whitelist-radio" id="nigeria">
+                                    <input type="radio" id="nigeria-radio"/>
+                                    <div>
+                                        <img />
+                                    </div>
+                                    <p>(Nigeria)</p>
+                                </li>
+                                <li class="whitelist-radio" id="america-radio">
+                                    <input type="radio"/>
+                                    <div>
+                                        <img />
+                                    </div>
+                                    <p>(Nigeria)</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- GRID INPUT -->
+                        <fieldset>
+                            <label>First Name</label>
+                            <input type="text" placeholder="First Name"/>
+                        </fieldset>
+
+                        <!-- WHITELIST FORM GRID -->
+                        <div class="whitelist-form-grid" data="" method="post">
+                            <fieldset>
+                                <label>Company Email Address</label>
+                                <input type="text" placeholder="Last Name"/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Company Phone Number</label>
+                                <input type="email" placeholder="joedoe@gmail.com"/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Address</label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>State</label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Company Reg Number <span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Industry</label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Tax ID<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>Pension Code<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>NHF<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>NHS<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>NSITF<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <label>ITF<span class="whitelist-input-optional">(Optional)</span></label>
+                                <input type="text" placeholder=""/>
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit">Next</button>
+                            </fieldset>
+                        </div>
+                    </form>
+                    <!-- FORM 2 -->
+                    <form id="Whitelist-form-2">
+
+                        <div class="Whitelist-title">
+                            <h2>Payroll Breakdown settings</h2>
+                        </div>
+                        <!-- SWITCH SELECTION -->
+                        <div>
+                            <ul class="Whitelist-selection">
+                                <li class="whitelist-checkbox" id="nigeria">
+                                    <input type="checkbox" id=""/>
+                                    <p>Calculate PAYE tax</p>
+                                </li>
+                                <li class="whitelist-checkbox" id="nigeria">
+                                    <input type="checkbox" id=""/>
+                                    <p>Calculate pension</p>
+                                </li>
+                                <li class="whitelist-checkbox" id="nigeria">
+                                    <input type="checkbox" id=""/>
+                                    <p>Calculate National Housing Fund (NHF)</p>
+                                </li>
+                                <li class="whitelist-checkbox" id="nigeria">
+                                    <input type="checkbox" id=""/>
+                                    <p>Calculate National Health Insurance Scheme (NHIS)</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="Whitelist-title">
+                                <h2>Advance Payroll Settings</h2>
+                            </div>
+
+                            <p>Total Gross Allowance (100%)</p>
+                            <!-- WHITELIST FORM GRID 3X3-->
+                            <!-- CALCULATE ALLOWANCES -->
+                            <div class="whitelist-form-grid-3X3" data="" method="post">
+                                <fieldset>
+                                    <label>Basic (%)</label>
+                                    <input type="number" placeholder="40" id="basic"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Housing (%)</label>
+                                    <input type="number" placeholder="10" id="housing"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Transportation (%)</label>
+                                    <input type="number" placeholder="15" id="basic"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Benefit-in-kind (%)</label>
+                                    <input type="number" placeholder="40" id="benefit"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Leave Allowance (%)</label>
+                                    <input type="number" placeholder="10" id="housing"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Lunch Allowance (%)</label>
+                                    <input type="number" placeholder="15" id="basic"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Unity allowance (%)</label>
+                                    <input type="number" placeholder="40" id="benefit"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Other Allowance (%)</label>
+                                    <input type="number" placeholder="10" id="housing"/>
+                                </fieldset>
+                            </div>
+                            <!-- END WHITELIST-GRID-3x3 -->
+                            <hr>
+                            <!-- START ADDITIONAL ALLOWANCES -->
+                            <div>
+                                <h2>Additional Allowances</h2>
+                                <div>
+                                    <button>Another Allowance</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- PENSION CALCULATOR -->
+                            <div class="whitelist-grid-2x2">
+                                <fieldset>
+                                    <label>Pension Calculator</label>
+                                    <input type="text" placeholder="Basic Salary, Housing and Transport" id="pension-calculator"/>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Day counts</label>
+                                    <input type="number" placeholder="Calendar Days" id="day-count"/>
+                                </fieldset>
+                            </div>
+                            <div>
+                                <h2>Statutory Rates (%)</h2>
+                                <div class="whitelist-grid-2x2">
+                                    <fieldset>
+                                        <label>Employee Pension (%)</label>
+                                        <input type="number" placeholder="4" id="housing"/>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label>Employer Pension (%)</label>
+                                        <input type="number" placeholder="10" id="basic"/>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <fieldset>
+                                <button type="submit">Join Whitelist</button>
+                            </fieldset>
+                        </div>  
+                    </form>
+                </div>
             </div>
         </main>
         <footer class="credits">
