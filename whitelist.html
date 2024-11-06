@@ -5,9 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/styleguide.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
         <title>Join Whitelist</title>
     </head>
     <body class="landing-page">
+
+        <!-- HEADER -->
         <header class="navbar">
             <img class="mask-group" src="assets/img/mask-group.png" alt="Logo">
             <div class="menu-toggle" id="menu-toggle">
@@ -29,11 +32,12 @@
                 </div>
             </nav>
         </header>
+
         <!-- WHITELIST FORM MAIN -->
         <main class="container">
-            <div class="Whitelist-grid">
+            <div class="whitelist-grid">
                 <!-- SIDE BAR  -->
-                <div class="Whitelist-sidebar">
+                <side class="whitelist-sidebar">
                     <!-- SIDEBAR NUMBERING -->
                     <div class="whitelist-numbering">
                         <div class="number-container">
@@ -61,29 +65,30 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </side>
 
-                <div class="whitelist-main">
+                <!-- MAIN -->
+                <section class="whitelist-main">
                     <!-- FORM 1 -->
-                    <form id="Whitelist-form-1">
+                    <form id="whitelist-form-1">
                         <div class="Whitelist-title">
                             <h2>Create an Account</h2>
                         </div>
 
                         <!-- RADIO SELECTION -->
                         <div>
-                            <ul class="Whitelist-selection">
+                            <ul class="whitelist-selection">
                                 <li class="whitelist-radio" id="nigeria">
-                                    <input type="radio" id="nigeria-radio"/>
-                                    <div>
-                                        <img />
+                                    <input type="radio" id="nigeria-radio" class="radio"/>
+                                    <div class="flag-holder">
+                                        <img src="assets/img/nigeria-flag.svg" alt="Nigeria flag"/>
                                     </div>
                                     <p>(Nigeria)</p>
                                 </li>
-                                <li class="whitelist-radio" id="america-radio">
-                                    <input type="radio"/>
-                                    <div>
-                                        <img />
+                                <li class="whitelist-radio" id="america">
+                                    <input type="radio" id="america-radio"/>
+                                    <div class="flag-holder">
+                                        <img src="assets/img/us-flag.svg" alt="USA flag"/>
                                     </div>
                                     <p>(Nigeria)</p>
                                 </li>
@@ -92,27 +97,27 @@
 
                         <!-- GRID INPUT -->
                         <fieldset>
-                            <label>First Name</label>
-                            <input type="text" placeholder="First Name"/>
+                            <label>Company Name</label>
+                            <input type="text" placeholder="Company Name"/>
                         </fieldset>
 
                         <!-- WHITELIST FORM GRID -->
                         <div class="whitelist-form-grid" data="" method="post">
                             <fieldset>
                                 <label>Company Email Address</label>
-                                <input type="text" placeholder="Last Name"/>
+                                <input type="text" placeholder="Company Email Address"/>
                             </fieldset>
                             <fieldset>
                                 <label>Company Phone Number</label>
-                                <input type="email" placeholder="joedoe@gmail.com"/>
+                                <input type="tel" placeholder="Company Phone Number"/>
                             </fieldset>
                             <fieldset>
                                 <label>Address</label>
-                                <input type="text" placeholder=""/>
+                                <input type="text" placeholder="Address"/>
                             </fieldset>
                             <fieldset>
                                 <label>State</label>
-                                <input type="text" placeholder=""/>
+                                <input type="text" placeholder="State"/>
                             </fieldset>
                             <fieldset>
                                 <label>Company Reg Number <span class="whitelist-input-optional">(Optional)</span></label>
@@ -120,7 +125,11 @@
                             </fieldset>
                             <fieldset>
                                 <label>Industry</label>
-                                <input type="text" placeholder=""/>
+                                <select type="text" placeholder="">
+                                    <optgroup>
+                                        <option>Financial Technology</option>
+                                    </optgroup>
+                                </select>
                             </fieldset>
                             <fieldset>
                                 <label>Tax ID<span class="whitelist-input-optional">(Optional)</span></label>
@@ -152,7 +161,7 @@
                         </div>
                     </form>
                     <!-- FORM 2 -->
-                    <form id="Whitelist-form-2">
+                    <form id="whitelist-form-2">
 
                         <div class="Whitelist-title">
                             <h2>Payroll Breakdown settings</h2>
@@ -259,9 +268,11 @@
                             </fieldset>
                         </div>  
                     </form>
-                </div>
+                </section>
             </div>
         </main>
+
+        <!-- FOOTER -->
         <footer class="credits">
             <div class="frame-footer">
                 <div class="content">
