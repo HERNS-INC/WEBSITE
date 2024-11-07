@@ -367,13 +367,16 @@
   .career-header{
     max-width: 646px;
     margin-left:75px;
+    padding-top:50px;
   }
 
-  .career-header span{
+  .career-header #welcome{
     background-color: #CCE6E8BF;
     border-radius: 28px;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 20px; 
+    max-width: 240px;
+    color:black;
   }
 
   .career-header h2{
@@ -477,6 +480,28 @@
   text-align: left;
   }
 
+  /* DOVE INTEGRATION */
+  .career-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .career-listing{
+    height: 100vh;
+    width: 100%;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+  }
+
+  .career-listing iframe{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 100px;
+    
+  }
+
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;
@@ -511,7 +536,19 @@
     .whitelist-form-wrapper{
       margin:30px 5px;
     }
-  
+    .career-header{
+      max-width: 646px;
+      margin:20px;
+      padding-top:10px;
+    }
+    .career-header #welcome{
+      background-color: #CCE6E8BF;
+      border-radius: 28px;
+      font-size: 14px;
+      padding: 10px 20px;
+      margin-top: 20px; 
+      max-width: 220px;
+    }
   }
 
  
