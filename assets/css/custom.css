@@ -232,6 +232,84 @@
     display: none;
   }
 
+  #whitelist-form-2 ul{
+    list-style: none;
+    padding:0;
+  }
+
+  #whitelist-form-2 ul li{
+    display:grid;
+    grid-template-columns: 1fr 9fr;
+    align-items: center;
+    padding:0;
+  }
+
+ .switch{
+    display: inline-block;
+    width:34.84px;
+    height: 18.58px;
+    background-color: blue;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .switch input{
+    opacity:0;
+    width:0;
+    height: 0;
+  }
+
+ .slider{
+    position:absolute;
+    left:0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    cursor:pointer;
+    background-color: #ccc;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider::before{
+    position:absolute;
+    content:"";
+    height: 13.94px;
+    width: 13.94px;
+    left:4px;
+    top: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+ 
+  .switch input:checked + .slider{
+    /* background-color: #2196F3; */
+    background-color: #3818D9;
+    ;
+  }
+
+  .switch input:checked + .slider::before{
+    -webkit-transform: translateX(14px);
+    -ms-transform: translateX(14x);
+    transform: translateX((14px));
+  }
+  
+  .slider.round{
+    border-radius: 34px;
+  }
+
+  .slider.round::before{
+    border-radius: 50%;
+  }
+
+  #whitelist-form-2 ul li input{
+    width:34.84px;
+    height: 18.58px;
+    background-color: green;
+  }
+
   .whitelist-form-grid-2x2{
     display: grid;
     grid-template-columns: 5fr 5fr;
