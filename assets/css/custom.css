@@ -154,6 +154,10 @@
     gap:40px;
   }
 
+  .whitelist-item-container{
+    margin-top: 100px;
+   }
+  
   .whitelist-item-container .number{
     display: flex;
     align-items: center;
@@ -228,18 +232,32 @@
     display: none;
   }
 
-  .whitelist-form-grid{
+  .whitelist-form-grid-2x2{
     display: grid;
     grid-template-columns: 5fr 5fr;
   }
 
-  .hideSideBarItem{
-    display:none;
+  .whitelist-form-grid-3x3{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
   }
 
-  .showSideBarItem{
-    display:block;
+  #whitelist-form-2 #total-allowance{
+    color:#1B6983;
+    font-size: 18px;
+    font-weight: 600;
   }
+
+  .hide{
+    display:none;
+    visibility: hidden;
+  }
+
+  .visible{
+    display:block;
+    visibility: visible;
+  }
+
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;
@@ -258,6 +276,11 @@
       display: none;
       visibility: hidden;
     }
+
+    .whitelist-item-container{
+      margin-top: 10px;
+     }
+
     .whitelist-form-wrapper{
       margin:30px 5px;
     }
