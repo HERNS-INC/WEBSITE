@@ -40,7 +40,7 @@
                 <side class="whitelist-sidebar">
                     <!-- SIDEBAR ITEMS -->
                     <div class="whitelist-item-container">
-                        <div class="bar-holder">
+                        <div class="bar-holder sideBarItem" id="sideBarDashedLine">
                             <div class="bar"></div>
                         </div>
                         <ul class="whitelist-item">
@@ -55,7 +55,7 @@
                                     <p>Let’s know about your company to help us provide a betterb experience for you</p>
                                 </div>
                             </li>
-                            <li id="whitelist-item-1">
+                            <li id="whitelist-item-1" class="sideBarItem">
                                 <div class="whitelist-numbering">
                                     <div class="number" id="1">
                                         <p class="active">2</p>
@@ -74,30 +74,29 @@
                 <section class="whitelist-main">
                     <!-- FORM 1 -->
                      <form class="whitelist-form">
-                        <div class="form-wrapper" id="whitelist-form-1" action="sendEmail()">
+                        <div class="whitelist-form-wrapper" id="whitelist-form-1" action="sendEmail()">
                             <div class="Whitelist-title">
                                 <h2>Create an Account</h2>
                             </div>
                             <!-- RADIO SELECTION -->
-                            <div>
-                                <ul class="whitelist-selection">
-                                    <li class="whitelist-radio" id="nigeria">
-                                        <input name="nigeria" type="radio" id="nigeria-radio" class="radio"/>
-                                        <div class="flag-holder">
-                                            <img src="assets/img/nigeria-flag.svg" alt="Nigeria flag"/>
-                                        </div>
-                                        <p>(Nigeria)</p>
-                                    </li>
-                                    <li class="whitelist-radio" id="america">
-                                        <input name="america" type="radio" id="america-radio"/>
-                                        <div class="flag-holder">
-                                            <img src="assets/img/us-flag.svg" alt="USA flag"/>
-                                        </div>
-                                        <p>(Nigeria)</p>
-                                    </li>
-                                </ul>
-                            </div>
-    
+                           
+                            <ul class="whitelist-selection">
+                                <li class="whitelist-radio" id="nigeria">
+                                    <input name="country" type="radio" id="nigeria-radio" class="radio" value="nigeria"/>
+                                    <div class="flag-holder">
+                                        <img src="assets/img/nigeria-flag.svg" alt="Nigeria flag"/>
+                                    </div>
+                                    <p>(Nigeria)</p>
+                                </li>
+                                <li class="whitelist-radio" id="america">
+                                    <input name="country" type="radio" id="america-radio" value="america"/>
+                                    <div class="flag-holder">
+                                        <img src="assets/img/us-flag.svg" alt="USA flag"/>
+                                    </div>
+                                    <p>(Nigeria)</p>
+                                </li>
+                            </ul>
+
                             <!-- GRID INPUT -->
                             <fieldset>
                                 <label>Company Name</label>
@@ -158,10 +157,10 @@
                                     <label>ITF<span class="whitelist-input-optional">(Optional)</span></label>
                                     <input name="" type="text" placeholder=""/>
                                 </fieldset>
-                                <fieldset>
-                                    <button type="submit">Next</button>
-                                </fieldset>
                             </div>
+                            <fieldset id="btn-holder">
+                                <button onclick="nextForm()" type="button">Next</button>
+                            </fieldset>
                         </div> 
                         <!-- FORM 2 -->
                         <div class="form-wrapper" id="whitelist-form-2">

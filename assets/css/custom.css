@@ -62,8 +62,12 @@
 
   .whitelist-form{
     background-color:  #FAFDF6;
-    padding: 30px 28px;
+    /* padding: 30px 28px; */
     border-radius: 8px;
+  }
+
+  .whitelist-form-wrapper{
+    margin:30px 28px;
   }
 
   .contact-input{
@@ -73,14 +77,14 @@
   .whitelist-form, fieldset, .contact-input fieldset{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
     justify-content: center;
     border:none;
   }
 
   .whitelist-form input, .whitelist-form select, .contact-input input{
-    padding: 8px;
-    border-radius: 8px;
+    padding: 11px;
+    border-radius: 8.11px;
     border: none;
     font-family: var(--text-title-font);
     font-size: 14px;
@@ -91,6 +95,10 @@
   .contact-input input{
       background-color: var(--primary-50);
       color: var(--text-title-color);
+    }
+  
+  .contact-input input:focus{
+    border-color: var(--primary-50);
   }
 
   .whitelist-form label{
@@ -128,10 +136,16 @@
     width: 200px;
     border:none;
     padding: 20px;
-    align-self: center;
-
   }
 
+  .contact-form button{
+    align-self: center;
+  }
+
+ 
+  .whitelist-form button{
+    align-self: flex-end;
+  }
    /* WHITELIST PAGE */
 
    .whitelist-grid{
@@ -181,8 +195,8 @@
 
   .whitelist-item-container .bar-holder .bar{
     height: 100px;
-    width: 2px;
-    border: 1px dashed var(--rounded-button-color);
+    width: 1px;
+    border: 1px dashed #dadada;;
     z-index: -10;
   }
 
@@ -191,8 +205,6 @@
     grid-template-columns: 2fr 8fr;
     margin:20px 0;
   }
-
-
 
   .whitelist-selection{
     display: flex;
@@ -221,6 +233,13 @@
     grid-template-columns: 5fr 5fr;
   }
 
+  .hideSideBarItem{
+    display:none;
+  }
+
+  .showSideBarItem{
+    display:block;
+  }
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;
@@ -239,6 +258,10 @@
       display: none;
       visibility: hidden;
     }
+    .whitelist-form-wrapper{
+      margin:30px 5px;
+    }
+  
   }
 
  
