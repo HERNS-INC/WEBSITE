@@ -10,6 +10,7 @@
     --text-small-normal-font-family: "Roboto", Helvetica, sans-serif;
     --text-title-font:"Poppins", sans-serif;
     --text-title-color:#0E2F3E;
+    --rounded-button-color:#EDF2F7;
     --text-content-font:"Prompt", sans-serif;
     --text-small-normal-font-weight: 400;
     --text-small-normal-font-size: 14px;
@@ -59,11 +60,17 @@
     max-width: 300px;
   }
 
+  .whitelist-form{
+    background-color:  #FAFDF6;
+    padding: 30px 28px;
+    border-radius: 8px;
+  }
+
   .contact-input{
     min-width: 400px;
   }
 
-  .contact-input fieldset{
+  .whitelist-form, fieldset, .contact-input fieldset{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -71,16 +78,39 @@
     border:none;
   }
 
-  .contact-input input{
-    background-color: var(--primary-50);
+  .whitelist-form input, .whitelist-form select, .contact-input input{
     padding: 8px;
     border-radius: 8px;
     border: none;
     font-family: var(--text-title-font);
-    color: var(--text-title-color);
     font-size: 14px;
-    margin: 4px 0;
+    margin: 5px 0;
     border: 2px solid white;
+  }
+
+  .contact-input input{
+      background-color: var(--primary-50);
+      color: var(--text-title-color);
+  }
+
+  .whitelist-form label{
+    color: #101413;
+    font-family: var(--text-content-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.19px;
+    text-align: left;
+  }
+
+  .whitelist-form input, .whitelist-form select{
+    border: 0.68px solid #8B98B1;
+    border-radius: 8.11px;
+    background-color: white;
+  }
+
+
+  .whitelist-form input:focus, .whitelist-form select:focus{
+    border: 0.68px solid var(--secondary-400)
   }
 
   .contact-input input:active{
@@ -91,7 +121,7 @@
     border: 2px solid var(--secondary-400)
   }
 
-  .contact-input button{
+  .whitelist-form button, .contact-input button{
     border-radius: 11px;
     margin-top:7.29px;
     background-color: var(--secondary-400);
@@ -110,17 +140,59 @@
     gap:40px;
   }
 
-  .whitelist-sidebar{
-    display: grid;
-    visibility: visible;
-    grid-template-columns: 2fr 8fr;
-    margin-top: 40px;
+  .whitelist-item-container .number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .whitelist-sidebar ul{
-    text-decoration: none;
-    list-style: none;
+  .whitelist-item-container .number p{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 49px;
+    width:49px;
+    border-radius: 50%;
+    background-color: var(--rounded-button-color);
+    border: 1px solid rgb(204, 226, 236);
   }
+
+  .whitelist-item-container .number p.active{
+    background-color: var(--text-title-color);
+    color:var(--rounded-button-color)
+  }
+
+  .whitelist-item-container{
+    position: relative;
+  }
+
+  .whitelist-item-container .bar-holder{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    top:0;
+    bottom:0;
+    left: 55px;
+    
+  }
+
+  .whitelist-item-container .bar-holder .bar{
+    height: 100px;
+    width: 2px;
+    border: 1px dashed var(--rounded-button-color);
+    z-index: -10;
+  }
+
+  .whitelist-item-container li{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    margin:20px 0;
+  }
+
+
 
   .whitelist-selection{
     display: flex;
@@ -142,6 +214,11 @@
 
   .whitelist-main #whitelist-form-2{
     display: none;
+  }
+
+  .whitelist-form-grid{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
   }
 
   @media (max-width: 768px){
