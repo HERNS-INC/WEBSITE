@@ -1,5 +1,6 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,300;1,500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,300;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,300;1,500&display=swap');
 
 :root {
     --primary-50: rgba(238, 252, 253, 1);
@@ -110,12 +111,16 @@
     text-align: left;
   }
 
-  .whitelist-form input, .whitelist-form select{
+  .whitelist-form input:valid, .whitelist-form select{
     border: 0.68px solid #8B98B1;
     border-radius: 8.11px;
     background-color: white;
   }
 
+  .whitelist-form input:invalid, .whitelist-form select:invalid{
+    border: 0.68px solid red;
+    background-color: rgb(238, 232, 232);
+  }
 
   .whitelist-form input:focus, .whitelist-form select:focus{
     border: 0.68px solid var(--secondary-400)
@@ -132,10 +137,15 @@
   .whitelist-form button, .contact-input button{
     border-radius: 11px;
     margin-top:7.29px;
-    background-color: var(--secondary-400);
     width: 200px;
     border:none;
     padding: 20px;
+  }
+
+  .whitelist-form #btn-submit{
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--secondary-400);
   }
 
   .contact-form button{
@@ -152,6 +162,17 @@
     display: grid;
     grid-template-columns: 4fr 6fr;
     gap:40px;
+  }
+
+  .whitelist-sidebar .whitelist-text{
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .whitelist-sidebar .whitelist-text h2{
+    font-weight: 600;
+    font-size: 20px;
   }
 
   .whitelist-item-container{
@@ -176,10 +197,10 @@
     border: 1px solid rgb(204, 226, 236);
   }
 
-  .whitelist-item-container .number p.active{
+  /* .whitelist-item-container .number p.active{
     background-color: var(--text-title-color);
     color:var(--rounded-button-color)
-  }
+  } */
 
   .whitelist-item-container{
     position: relative;
@@ -349,6 +370,14 @@
     .whitelist-grid{
       grid-template-columns: 1fr;
     }
+
+    /* .whitelist-form-grid-2x2{
+      width: 400px;
+    }
+
+    .whitelist-form-grid-3x3{
+      width: 400px;
+    } */
 
     .whitelist-sidebar{
       display: none;

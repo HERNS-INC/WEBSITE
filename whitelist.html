@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="assets/css/styleguide.css">
         <link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
         <title>Join Whitelist</title>
+        <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     </head>
     <body class="landing-page">
 
@@ -47,7 +48,7 @@
                             <li id="whitelist-item-1">
                                 <div class="whitelist-numbering">
                                     <div class="number" id="1">
-                                        <p>1</p>
+                                        <p id="number1">1</p>
                                     </div>
                                 </div>
                                 <div class="whitelist-text">
@@ -57,13 +58,13 @@
                             </li>
                             <li id="whitelist-item-2" class="sideBarItem">
                                 <div class="whitelist-numbering">
-                                    <div class="number" id="1">
-                                        <p class="active">2</p>
+                                    <div class="number" id="2">
+                                        <p id="number2">2</p>
                                     </div>
                                 </div>
                                 <div class="whitelist-text">
-                                    <h4>Tell us about your company</h4>
-                                    <p>Let’s know about your company to help us provide a betterb experience for you</p>
+                                    <h4>Add salary settings</h4>
+                                    <p>Add your salary settings here. Add your salary breakdown so that you never have to compute it again.</p>
                                 </div>
                             </li>
                         </ul>
@@ -73,7 +74,7 @@
                 <!-- MAIN -->
                 <section class="whitelist-main">
                     <!-- FORM 1 -->
-                     <form class="whitelist-form">
+                     <form name="userForm" class="whitelist-form" action="mailto:maruche@herns.org" enctype="text/plain">
                         <div class="whitelist-form-wrapper" id="whitelist-form-1" action="sendEmail()">
                             <div class="Whitelist-title">
                                 <h2>Create an Account</h2>
@@ -82,7 +83,7 @@
                            
                             <ul class="whitelist-selection">
                                 <li class="whitelist-radio" id="nigeria">
-                                    <input name="country" type="radio" id="nigeria-radio" class="radio" value="nigeria"/>
+                                    <input checked name="country" type="radio" id="nigeria-radio" class="radio" value="nigeria"/>
                                     <div class="flag-holder">
                                         <img src="assets/img/nigeria-flag.svg" alt="Nigeria flag"/>
                                     </div>
@@ -100,30 +101,30 @@
                             <!-- GRID INPUT -->
                             <fieldset>
                                 <label>Company Name</label>
-                                <input name="company_name" type="text" placeholder="Company Name"/>
+                                <input required name="company_name" type="text" placeholder="Company Name"/>
                             </fieldset>
     
                             <!-- WHITELIST FORM GRID -->
                             <div class="whitelist-form-grid-2x2" data="" method="post">
                                 <fieldset>
                                     <label>Company Email Address</label>
-                                    <input name="email_address" type="text" placeholder="Company Email Address"/>
+                                    <input name="emailAddress" type="text" placeholder="Company Email Address" required/>
                                 </fieldset>
                                 <fieldset>
                                     <label>Company Phone Number</label>
-                                    <input name="company_phone_number" type="tel" placeholder="Company Phone Number"/>
+                                    <input name="companyPhone" type="tel" placeholder="Company Phone Number" required/>
                                 </fieldset>
                                 <fieldset>
                                     <label>Address</label>
-                                    <input name="address" type="text" placeholder="Address"/>
+                                    <input name="address" type="text" placeholder="Address" required/>
                                 </fieldset>
                                 <fieldset>
                                     <label>State</label>
-                                    <input name="state" type="text" placeholder="State"/>
+                                    <input name="state" type="text" placeholder="State" required/>
                                 </fieldset>
                                 <fieldset>
                                     <label>Company Reg Number <span class="whitelist-input-optional">(Optional)</span></label>
-                                    <input name="company_reg_number" type="text" placeholder=""/>
+                                    <input  name="companyRegNumber" type="text" placeholder=""/>
                                 </fieldset>
                                 <fieldset>
                                     <label>Industry</label>
@@ -135,11 +136,11 @@
                                 </fieldset>
                                 <fieldset>
                                     <label>Tax ID<span class="whitelist-input-optional">(Optional)</span></label>
-                                    <input name="tax_id" type="text" placeholder=""/>
+                                    <input name="taxId" type="text" placeholder=""/>
                                 </fieldset>
                                 <fieldset>
                                     <label>Pension Code<span class="whitelist-input-optional">(Optional)</span></label>
-                                    <input name="pension_code" type="text" placeholder=""/>
+                                    <input name="pensionCode" type="text" placeholder=""/>
                                 </fieldset>
                                 <fieldset>
                                     <label>NHF<span class="whitelist-input-optional">(Optional)</span></label>
@@ -172,28 +173,28 @@
                                 <ul class="Whitelist-selection">
                                     <li class="whitelist-checkbox" id="nigeria">
                                         <label class="switch">
-                                            <input type="checkbox" name=""/>
+                                            <input type="checkbox" name="tax"/>
                                             <span class="slider round"></span>
                                         </label>
                                         <p>Calculate PAYE tax</p>
                                     </li>
                                     <li class="whitelist-checkbox" id="nigeria">
                                         <label class="switch">
-                                            <input type="checkbox" name=""/>
+                                            <input type="checkbox" name="pension"/>
                                             <span class="slider round"></span>
                                         </label>
                                         <p>Calculate pension</p>
                                     </li>
                                     <li class="whitelist-checkbox" id="nigeria">
                                         <label class="switch">
-                                            <input type="checkbox" name=""/>
+                                            <input type="checkbox" name="nhf"/>
                                             <span class="slider round"></span>
                                         </label>
                                         <p>Calculate National Housing Fund (NHF)</p>
                                     </li>
                                     <li class="whitelist-checkbox" id="nigeria">
                                         <label class="switch">
-                                            <input type="checkbox" name=""/>
+                                            <input type="checkbox" name="nhis"/>
                                             <span class="slider round"></span>
                                         </label>
                                         <p>Calculate National Health Insurance Scheme (NHIS)</p>
@@ -208,38 +209,38 @@
                                 <p id="total-allowance">Total Gross Allowance (100%)</p>
                                 <!-- WHITELIST FORM GRID 3X3-->
                                 <!-- CALCULATE ALLOWANCES -->
-                                <div class="whitelist-form-grid-3x3" data="" method="post">
+                                <div class="whitelist-form-grid-3x3">
                                     <fieldset>
                                         <label>Basic (%)</label>
-                                        <input type="number" placeholder="40" id="basic"/>
+                                        <input name="basic" type="number" placeholder="40" id="basic"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Housing (%)</label>
-                                        <input type="number" placeholder="10" id="housing"/>
+                                        <input name="housing" type="number" placeholder="10" id="housing"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Transportation (%)</label>
-                                        <input type="number" placeholder="15" id="basic"/>
+                                        <input name="transport" type="number" placeholder="15" id="transport"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Benefit-in-kind (%)</label>
-                                        <input type="number" placeholder="40" id="benefit"/>
+                                        <input name="benefit" type="number" placeholder="40" id="benefit"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Leave Allowance (%)</label>
-                                        <input type="number" placeholder="10" id="housing"/>
+                                        <input name="leave" type="number" placeholder="10" id="leave"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Lunch Allowance (%)</label>
-                                        <input type="number" placeholder="15" id="basic"/>
+                                        <input name="lunch" type="number" placeholder="15" id="lunch"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Unity allowance (%)</label>
-                                        <input type="number" placeholder="40" id="benefit"/>
+                                        <input name="unity" type="number" placeholder="40" id="unity"/>
                                     </fieldset>
                                     <fieldset>
                                         <label>Other Allowance (%)</label>
-                                        <input type="number" placeholder="10" id="housing"/>
+                                        <input name="others" type="number" placeholder="10" id="others"/>
                                     </fieldset>
                                 </div>
                                 <!-- END WHITELIST-GRID-3x3 -->
@@ -260,7 +261,7 @@
                                     </fieldset>
                                     <fieldset>
                                         <label>Day counts</label>
-                                        <input type="number" placeholder="Calendar Days" id="day-count"/>
+                                        <input name="dayCount" type="text" placeholder="Calendar Days" id="day-count"/>
                                     </fieldset>
                                 </div>
                                 <div>
@@ -268,16 +269,16 @@
                                     <div class="whitelist-form-grid-2x2">
                                         <fieldset>
                                             <label>Employee Pension (%)</label>
-                                            <input type="number" placeholder="4" id="housing"/>
+                                            <input name="employee" type="number" placeholder="4" id="employee"/>
                                         </fieldset>
                                         <fieldset>
                                             <label>Employer Pension (%)</label>
-                                            <input type="number" placeholder="10" id="basic"/>
+                                            <input name="employer" type="number" placeholder="10" id="employer"/>
                                         </fieldset>
                                     </div>
                                 </div>
                                 <fieldset>
-                                    <button type="submit">Join Whitelist</button>
+                                    <button id="btn-submit" type="submit">Join Whitelist</button>
                                 </fieldset>
                             </div>  
                         </div>
@@ -321,5 +322,6 @@
             </div>
         </footer>
     </body>
+
     <script src="assets/js/script2.js"></script>
 </html>
