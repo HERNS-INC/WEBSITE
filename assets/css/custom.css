@@ -372,11 +372,18 @@
 
   .career-header #welcome{
     background-color: #CCE6E8BF;
-    border-radius: 28px;
+    font-family: "Prompt", sans-serif;
     font-size: 16px;
-    padding: 10px 20px; 
-    max-width: 240px;
-    color:black;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #09090B;
+    width: max-content;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 10px 20px;
+    border-radius: 28px;
+    border: 1px solid #76D9EA;
   }
 
   .career-header h2{
