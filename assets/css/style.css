@@ -62,7 +62,7 @@ body {
 display: flex;
 gap: 80px; /* Space between links */
 /* Adjust this value as needed */
-
+align-items: center;
 }
 
 .navbar-2 a {
@@ -132,11 +132,12 @@ white-space: nowrap;
       left: -250px; 
       z-index: 1000;
       transition: transform 0.3s ease;
-      padding: 10px; 
+      padding: 20px 10px; 
       border-radius: 8px; 
       height: 100vh; /* Set height to full viewport height */
       overflow-y: auto; /* Allow scrolling if content exceeds height */
       gap: 20px; /* Reduce the gap between menu items */
+      align-items:flex-start;
   
   }
  
