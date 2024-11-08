@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/styleguide.css">
       <link rel="stylesheet" href="assets/css/custom.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <title>About</title>
     </head>
     <body>
@@ -37,14 +38,16 @@
                 <section class="value-section">
                     <!-- OUR STORY -->
                     <div class="our-story">
-                        <div class="our-story-wrapper">
-                            <h3>Our Story</h3>
-                            <hr class="h-line" id="h-line-1">
-                            <p>
+                        <div class="title">
+                          <h3>Our Story</h3>
+                        </div>
+                        <div class="wrapper">
+                            <div class="h-line-container"><div class="h-line" id="h-line-1"></div></div>
+                            <h3>
                                 GRRN empower individuals and businesses to achieve 
                                 financial freedom with our comprehensive suite of services
-                            </p>
-                            <hr class="h-line" id="h-line-2">
+                            </h3>
+                            <div class="h-line-container"><div class="h-line" id="h-line-2"></div></div>
                             <p>
                                 GRRN harnesses the power of advanced analytics and AI-driven 
                                 recommendations to provide insights that enhance your financial 
@@ -57,7 +60,9 @@
                     <!-- OUR DRIVING FORCE -->
                     <div class="driving-force">
                         <div>
-                            <h3>Our Driving Force</h3>
+                            <div class="h-line-container"><div class="h-line" id="h-line-3"></div></div>
+                            <h2>Our Driving Force</h2>
+                            <div class="h-line-container"><div class="h-line" id="h-line-4"></div></div>
                         </div>
                         <div class="driving-force-top">
                             <!-- CARD 1 -->
@@ -126,21 +131,21 @@
                             <div class="accordion-item">
                                 <p class="question">What services does GRRN provide?</p>
                                 <button>
-                                    <i></i>
+                                    <i class="fa fa-plus"></i>
                                 </button>
                             </div>
                             <!-- Accordion 2 -->
                             <div class="accordion-item">
                                 <p class="question">How does GRRN ensure the security of transactions?</p>
                                 <button>
-                                    <i></i>
+                                    <i class="fa fa-plus"></i>
                                 </button>
                             </div>
                               <!-- Accordion 2 -->
                               <div class="accordion-item">
                                 <p class="question">Who can benefit from using GRRN?</p>
                                 <button>
-                                    <i></i>
+                                    <i class="fa fa-plus"></i>
                                 </button>
                             </div>
                           
@@ -149,7 +154,7 @@
                 </section>
 
                 <!-- CTA ACTION -->
-                <session class="cta-session">
+                <session class="cta-section">
                     <div class="cta-box">
                         <!-- BLANK TOP -->
                         <div class="cta-top"></div>
@@ -170,11 +175,12 @@
                             </div> 
                         </div>
                         <!-- IPhone15 PRO MOCKUP -->
-                        <div class="cta-image-container">
+                        <div class="cta-image">
                             <img src="assets/img/iphone_mockup.png"/>
                         </div> 
                     </div>
                 </session>
+
             </div>
         </main>
         <footer class="credits">

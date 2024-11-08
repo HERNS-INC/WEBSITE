@@ -509,6 +509,240 @@
     
   }
 
+  /* ABOUT PAGE */
+
+  .our-story{
+    display: flex;
+    justify-content: center;
+    justify-items: c;
+    flex-direction: column;
+    /* background-color: red; */
+  }
+
+  .our-story .title{
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color:#0E2F3E;
+  }
+
+  .our-story .wrapper{
+    text-align: center;
+    max-width: 871px;
+    /* background-color: blue; */
+  }
+
+  .h-line{
+    background-color: var(--primary-950);
+    color:var(--primary-50);
+    border: 1px solid #6DBA28
+  }
+
+.h-line-container{
+    display: flex;
+  }
+
+.our-story .h-line-container{
+  justify-content: center;
+}
+
+.driving-force .h-line-container{
+  justify-content: flex-start;
+}
+
+.h-line#h-line-1{
+    width: 196px;
+}
+
+.h-line#h-line-2{
+    width: 475px;
+  }
+
+.h-line#h-line-3{
+    width: 100px;
+  }
+
+.h-line#h-line-4{
+    width: 250px;
+}
+
+  .our-story .wrapper h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #0E2F3E;
+  }
+
+  .our-story .wrapper p{
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24.19px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .driving-force h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: left;
+    color:#0E2F3E;
+  }
+
+  .driving-force-top{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    gap:20px;
+    margin: 20px 0;
+  }
+
+  .card{
+    background-color: #EEFCFD80;
+    border: 1px solid #E5F7D0;
+    padding: 44px;
+    border-radius: 16px;
+  }
+
+  .card h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: left;
+    color:#0E2F3E;
+  }
+
+  .card p{
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24.19px;
+    text-align: left;
+    color:#0E2F3E;
+  }
+
+  /* .faq-section{
+
+  } */
+
+  .faq-wrapper{
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    padding: 59px 35px;
+    gap:80px
+  }
+
+  .faq-content h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    text-align: left;
+    color: #0E2F3E;
+
+  }
+
+  .faq-content p{
+    font-family: "Prompt", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    color: #0E2F3E;
+  }
+
+  .accordion{
+    display:flex;
+    gap:16px;
+    flex-direction: column;
+  }
+
+  .accordion .accordion-item{
+    border: 1px solid #1A82A0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+  }
+
+  .accordion .accordion-item p{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    color: #0E2F3E;
+
+  }
+
+  .accordion .accordion-item button{
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .accordion .accordion-item button i{
+    color: #6D6D6D;
+  }
+
+  /* CTA SESSION */
+  .cta-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cta-section .cta-box{
+    width:80vw;
+    height:517px;
+    position: relative;
+  }
+
+  .cta-action{
+    border-radius: 28px;
+    background-color: #1A202C;
+    padding: 40px;
+    margin-top: 80px;
+  }
+
+  .cta-content h3{
+    font-family: "Inter", sans-serif;
+    font-size: 51.8px;
+    font-weight: 700;
+    line-height: 61.88px;
+    text-align: left;
+    color:#FFFFFF;
+    max-width: 594px;
+  }
+
+  .cta-store{
+    display:flex;
+    gap:10px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cta-image{
+    position:absolute;
+    bottom: 0;
+    top:0;
+    right:0;
+  }
+
+  .cta-image img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;
@@ -556,6 +790,62 @@
       margin-top: 20px; 
       max-width: 220px;
     }
+
+    /* ABOUT PAGE */
+    .our-story .h-line#h-line-1{
+      width: 196px;
+    }
+    .our-story .h-line#h-line-2{
+      width: 100%;
+    }
+    
+  .driving-force-top{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
+  }
+  
+  .card{
+    padding: 20px;
+  }
+
+  .faq-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px 0;
+    gap:40px
+  }
+
+  .cta-section .cta-box{
+    width:90vw;
+    height:auto;
+    position: relative;
+  }
+
+  .cta-action{
+    border-radius: 28px;
+    background-color: #1A202C;
+    padding: 20px;
+    margin-top: 80px;
+  }
+
+  
+  .cta-content h3{
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: left;
+    color:#FFFFFF;
+    max-width: 594px;
+  }
+
+  .cta-image{
+    position:absolute;
+    bottom: 20;
+    top:0;
+    right:0;
+    display: none;
+  }
   }
 
  
