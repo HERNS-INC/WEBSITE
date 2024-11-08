@@ -14,10 +14,10 @@ const form2_option = document.getElementById("number2")
 const form1_option = document.getElementById("number1")
 
 const body = document.body
+
 nigeriaRadio.check = true;
 
 form.addEventListener('submit', (e)=>{
-    // Forwards the data to the backend_server
     e.preventDefault()
     sendEmail();
 })
@@ -64,38 +64,59 @@ const showModal=()=>{
     // Displays the modal after completion
 }
 
-const validate=(formData)=>{
+const isValid=(form)=>{
     // Validates user Input before sending the form
-    if (formData.length > 1){
-        return true;
+    let valid = true;
+
+    for (let elem of form){
+        if (elem.value === "" && elem.required){
+            elem.style.backgroundColor = ""
+            elem.style.border = "1px solid red"
+            valid = false;
+    }else{
+        elem.style.border = "1px solid gray"
+        elem.style.backgroundColor = "white"
     }
-    return false
+}
+    return valid
+}
+
+const getFormData=()=>{
+    let payload = {}
+    if (isValid(form)){
+        for (let elem in form){
+            payload[elem.name] = elem.value;
+        }
+        return payload
+    }else{
+        return null
+    }
 }
 
 const sendEmail=()=>{
     // forwards the form data to the email provided
-    let payload = {}
-   for (let el of form){
-        payload[el.name] = el.value
-   }
+    
+    const input_data = getFormData()
 
-//    console.log(payload)
-   const data = {
-        Host:"smtp.gmail.com",
-        Username:"",
-        Password:"",
-        To:"receiver",
-        From:"sender",
-        Subject:"",
-        body:payload
-};
+    if (input_data != null){
+        try{
+            const data = {
+                Host:"smtp.gmail.com",
+                Username:"",
+                Password:"",
+                To:"receiver",
+                From:"sender",
+                Subject:"",
+                body:input_data 
+        };
 
-    try{
-        // Email.send(payload)
-        
-    }catch(e){
-        console.error(e)
-    }
+        console.log(data)
+
+        // 
+        }catch(e){
+            console.error(e)
+        }
+    } 
 }
 
 const switchCountry=(country)=>{
