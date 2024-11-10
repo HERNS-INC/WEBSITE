@@ -743,6 +743,41 @@
     object-fit: contain;
   }
 
+  /* PRIVACY */
+
+  .privacy, .terms{
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .privacy ul li{
+    list-style-type: circle;
+  }
+
+  .main-list .numbering{
+    font-weight: bold;
+  }
+
+  /* .privacy-item li{
+    font-weight: bold;
+  } */
+
+  .main-list .sub-list.bullet{
+    list-style-type: none;
+  }
+
+  .privacy-item .alpha li{
+    list-style-type: upper-alpha;
+  }
+
+  .terms .sub-list li{
+    list-style-type: decimal;
+  }
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;
