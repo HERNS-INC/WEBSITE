@@ -670,6 +670,9 @@
     border: 1px solid #1A82A0;
     border-radius: 12px;
     padding: 20px 24px;
+  }
+
+  .accordion .accordion-item .accordion-grid{
     display: grid;
     grid-template-columns: 9fr 1fr;
   }
@@ -680,9 +683,12 @@
     font-weight: 500;
     text-align: left;
     color: #0E2F3E;
-
   }
 
+  .accordion .accordion-grid p{
+    font-weight: 700;
+  }
+  
   .accordion .accordion-item button{
     border:none;
     background-color: transparent;
@@ -691,6 +697,18 @@
 
   .accordion .accordion-item button i{
     color: #6D6D6D;
+  }
+
+  .active .accordion .accordion-item button{
+    background-color: #ececec;
+  }
+
+  .accordion .accordion-item .answer{
+    display: none;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: ease-out .4s;
   }
 
   /* CTA SESSION */
@@ -778,6 +796,7 @@
   .terms .sub-list li{
     list-style-type: decimal;
   }
+
   @media (max-width: 768px){
     .contact-form{
       flex-direction: column;

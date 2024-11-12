@@ -13,6 +13,31 @@ const sideBarDashedLine = document.getElementById('sideBarDashedLine')
 const form2_option = document.getElementById("number2")
 const form1_option = document.getElementById("number1")
 
+// ACCORDION BUTTONS 
+
+const btns = document.getElementsByClassName('accordion-btn')
+const answers = document.getElementsByClassName("answer")
+
+// DISPLAYS ANSWER TO QUESTION IN THE ABOUT PAGE
+/*
+When a button is clicked, it shows the corresponding answer
+
+*/
+for (let i = 0; i < btns.length; i++){
+    const btn = btns[i]
+    const panel = answers[i]
+    btn.addEventListener("click", ()=>{
+        if (panel.style.display==="block"){
+            panel.style.display = "none"
+        }else{
+            panel.style.display = "block"
+            panel.style.transition = "ease out .4s"
+            panel.style.maxHeight = "100%"
+        }
+    })
+}
+
+
 const body = document.body
 
 nigeriaRadio.check = true;
@@ -127,4 +152,9 @@ const switchCountry=(country)=>{
     sideBarDashedLine.style.visibility = 'hidden'
     sideBarListItemTwo.style.visibility = 'hidden'
    }
+}
+
+
+const ToggleAccordion=()=>{
+    console.log('btn clicked')
 }
