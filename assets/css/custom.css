@@ -720,7 +720,7 @@
 
   .cta-section .cta-box{
     width:80vw;
-    height:517px;
+    height:500px;
     position: relative;
   }
 
@@ -759,6 +759,22 @@
     height: 100%;
     width: auto;
     object-fit: contain;
+  }
+
+  .cta-store button{
+      padding: 10px 20px;
+      border-radius: 8px;
+      background-color: var(--primary-50);
+      color: #0E2F3E;
+      border:none;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+  }
+
+  .cta-store .learn-more{
+    background-color: var(--secondary-400);
+    color: var(--primary-950)
   }
 
   /* PRIVACY */

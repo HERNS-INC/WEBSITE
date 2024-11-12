@@ -9,12 +9,12 @@ const americaRadio = document.getElementById('america-radio')
 const sideBarItems = document.getElementsByClassName('sideBarItem')
 const sideBarListItemTwo = document.getElementById('whitelist-item-2')
 const sideBarDashedLine = document.getElementById('sideBarDashedLine')
+const switchBtn = document.getElementById("switch-btn")
 
 const form2_option = document.getElementById("number2")
 const form1_option = document.getElementById("number1")
 
 // ACCORDION BUTTONS 
-
 const btns = document.getElementsByClassName('accordion-btn')
 const answers = document.getElementsByClassName("answer")
 
@@ -148,9 +148,25 @@ const switchCountry=(country)=>{
    if (country==="nigeria"){
     sideBarDashedLine.style.visibility ='visible'
     sideBarListItemTwo.style.visibility='visible'
+    
+    // BUTTON
+    switchBtn.innerHTML = "Next"
+    switchBtn.style.borderRadius = "8px"
+    switchBtn.style.border = "1px solide gray"
+    switchBtn.style.backgroundColor = "#ececec"
+    switchBtn.style.color = "rgba(14, 47, 62, 1)"
+    // ACTION
+    switchBtn.onclick = nextForm
+
    }else{
     sideBarDashedLine.style.visibility = 'hidden'
     sideBarListItemTwo.style.visibility = 'hidden'
+
+    // STYLING BUTTON
+    switchBtn.innerText = "Submit"
+    switchBtn.style.backgroundColor="rgba(141, 213, 70, 1)"
+    switchBtn.onclick = sendEmail
+
    }
 }
 
