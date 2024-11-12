@@ -9,7 +9,9 @@ const americaRadio = document.getElementById('america-radio')
 const sideBarItems = document.getElementsByClassName('sideBarItem')
 const sideBarListItemTwo = document.getElementById('whitelist-item-2')
 const sideBarDashedLine = document.getElementById('sideBarDashedLine')
+
 const switchBtn = document.getElementById("switch-btn")
+const joinWhiteListBtn = document.getElementById("btn-submit")
 
 const form2_option = document.getElementById("number2")
 const form1_option = document.getElementById("number1")
@@ -42,10 +44,10 @@ const body = document.body
 
 nigeriaRadio.check = true;
 
-form.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    sendEmail();
-})
+// form.addEventListener('submit', (e)=>{
+//     e.preventDefault()
+//     sendEmail();
+// })
 
 nigeriaRadio.addEventListener('click', ()=>{
     switchCountry('nigeria');
@@ -123,6 +125,8 @@ const sendEmail=()=>{
     
     const input_data = getFormData()
 
+    console.log("Email sent")
+    
     if (input_data != null){
         try{
             const data = {
@@ -153,24 +157,37 @@ const switchCountry=(country)=>{
     switchBtn.innerHTML = "Next"
     switchBtn.style.borderRadius = "8px"
     switchBtn.style.border = "1px solide gray"
-    switchBtn.style.backgroundColor = "#ececec"
-    switchBtn.style.color = "rgba(14, 47, 62, 1)"
+    switchBtn.style.backgroundColor = "#EDF2F7"
+    switchBtn.style.color = "#0E2F3E"
+
     // ACTION
     switchBtn.onclick = nextForm
 
    }else{
+    
+    // AMERICA SELECTED
     sideBarDashedLine.style.visibility = 'hidden'
     sideBarListItemTwo.style.visibility = 'hidden'
 
     // STYLING BUTTON
     switchBtn.innerText = "Submit"
     switchBtn.style.backgroundColor="rgba(141, 213, 70, 1)"
+    switchBtn.style.color= "#0E2F3E"
+    switchBtn.style.fontSize = "16px"
+    switchBtn.style.fontFamily = "Poppins"
+
+    // ACTION
     switchBtn.onclick = sendEmail
 
    }
 }
 
 
-const ToggleAccordion=()=>{
-    console.log('btn clicked')
-}
+// const ToggleAccordion=()=>{
+//     console.log('btn clicked')
+// }
+
+
+// joinWhiteListBtn.addEventListener("submit", ()=>{
+//     console.log('form submitted')
+// })
