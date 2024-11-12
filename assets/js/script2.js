@@ -91,61 +91,71 @@ const showModal=()=>{
     // Displays the modal after completion
 }
 
-const isValid=(form)=>{
+const isValid=(payload)=>{
     // Validates user Input before sending the form
     let valid = true;
-
-    for (let elem of form){
-        if (elem.value === "" && elem.required){
-            elem.style.backgroundColor = ""
-            elem.style.border = "1px solid red"
-            valid = false;
+    if (
+        payload.country && payload.company_name 
+        && payload.email_address && payload.company_phone && payload.address && payload && state){
+        return valid
     }else{
-        elem.style.border = "1px solid gray"
-        elem.style.backgroundColor = "white"
+        return !valid
     }
-}
-    return valid
 }
 
 const getFormData=()=>{
     let payload = {}
-    if (isValid(form)){
-        for (let elem in form){
-            payload[elem.name] = elem.value;
-        }
-        return payload
-    }else{
-        return null
+    for (let elem in form){
+        payload[elem.name] = elem.value;
     }
+    return payload
 }
 
 const sendEmail=()=>{
     // forwards the form data to the email provided
     
-    const input_data = getFormData()
+    const data = getFormData()
+    const is_valid = isValid(data)
 
-    console.log("Email sent")
-    
-    if (input_data != null){
+    if (is_valid){
         try{
             const data = {
-                Host:"smtp.gmail.com",
-                Username:"",
-                Password:"",
-                To:"receiver",
-                From:"sender",
+                // Host:"smtp.gmail.com",
+                Host:"smtp.elasticemail.com",
+                Username:"noreply@grrn.io",
+                Password:"7B29724D0A131122D4E01AAEA017E86324BB",
+                To:"maruche@herns.org",
+                From:"noreply@grrn.io",
                 Subject:"",
-                body:input_data 
-        };
-
-        console.log(data)
-
-        // 
+                body:"Nothing to see here"
+                };
+        Email.send(input_data).then(
+            message =>{
+                if (message=="OK"){
+                    Swal.fire({
+                        title: "Thank you!",
+                        text: "We have received your data. We'll be in touch!",
+                        icon: "success"
+                      });
+                }else{
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Something went wrong!"
+                      });
+                }
+            } 
+        )
         }catch(e){
             console.error(e)
         }
-    } 
+    }else{
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Invalid Input(s)!"
+          });
+    }
 }
 
 const switchCountry=(country)=>{

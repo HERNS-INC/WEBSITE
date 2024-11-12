@@ -117,10 +117,10 @@
     background-color: white;
   }
 
-  .whitelist-form input:invalid, .whitelist-form select:invalid{
+  /* .whitelist-form input:invalid, .whitelist-form select:invalid{
     border: 0.68px solid red;
     background-color: rgb(238, 232, 232);
-  }
+  } */
 
   .whitelist-form input:focus, .whitelist-form select:focus{
     border: 0.68px solid var(--secondary-400)
