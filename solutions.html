@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/mask-group.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styleguide.css">
-    <title>Solution</title>
+    <title>Solutions</title>
 </head>
 <div class="landing-page">
     <div class="container">
         <header class="navbar">
-            <img class="mask-group" src="assets/img/mask-group.png" alt="Logo">
-                <div class="menu-toggle" id="menu-toggle">
+            <a href="index.html"><img class="mask-group" src="assets/img/mask-group.png" alt="Logo"></a>
+            <div class="menu-toggle" id="menu-toggle">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -24,7 +25,7 @@
                     <a href="contact.html">Contact Us</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <div class="sign-up-wrapper">
-                        <a href="whitelist.html"><button class="signup-button">Join the Waitlist</button></a>
+                        <a href="whitelist.html"><button class="button-86" >Join the Waitlist</button></a>
                         <!-- <button class="signup-button">
                             <div class="overlap-group">
                                 <a href="whitelist.html"><div class="sign-up">Join the Waitlist</div></a>
@@ -46,13 +47,29 @@
                     </div>
                     <div class="div-2">
                         <div class="div-order">
-                            <img class="img" src="assets/img/order-4.png" alt="Order 4" />
-                            <img class="img" src="assets/img/order-5.png" alt="Order 5" />
-                            <img class="img" src="assets/img/order-3.png" alt="Order 3" />
+                            <img class="img" src="assets/img/order-4.png" alt="💳 Payment and Remittance" 
+                                 data-modal-text="Effortlessly send, pay, and accept transactions with low fees for domestic and cross-border payments in multiple currencies. GRRN simplifies financial interactions, ensuring secure and affordable transactions globally." />
+                    
+                            <img class="img" src="assets/img/order-5.png" alt="🏦 Digital Banking" 
+                                 data-modal-text="Empowering underserved communities with inclusive financial access. Enjoy low charges for premium features like account management and SME lending, bridging the gap between traditional and emerging markets." />
+                    
+                            <img class="img" src="assets/img/order-3.png" alt="🌍 XE Send Money" 
+                                 data-modal-text="Expand your global reach with seamless cross-border payments in multiple currencies. GRRN ensures fast, secure, and efficient transactions, connecting you to the world with ease." />
                         </div>
                         <div class="div-order-2">
-                            <img class="img" src="assets/img/order-2.png" alt="Order 2" />
-                            <img class="img" src="assets/img/order-1.png" alt="Order 1" />
+                            <img class="img" src="assets/img/order-2.png" alt="🤖 GRRN AI" 
+                                 data-modal-text="Cancel forgotten subscriptions effortlessly! GRRN AI identifies and reports recurring payments, allowing quick cancellations. Gain actionable insights into your spending patterns and receive personalized financial advice with our intelligent technology." />
+                    
+                            <img class="img" src="assets/img/order-1.png" alt="💳 Virtual Cards" 
+                                 data-modal-text="Secure your transactions with GRRN’s digital cards. Benefit from affordable services, frequent tokenization for enhanced protection, and reduced remittance costs. Stay safe from fraudulent payments with every transaction." />
+                        </div>
+                    </div>
+                    
+                    <!-- Modal Structure -->
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p id="modal-text"></p>
                         </div>
                     </div>
                 </div>
@@ -67,7 +84,7 @@
                     empowerment
                 </p>
                 <div class="frame">
-                    <div class="sign-up">Join the Waitlist</div>
+                    <div class="sign-up"><a style="text-decoration: none;" href="whitelist.html">Join the waitlist</a></div>
                 </div>
             </div>
             <img class="image" src="assets/img/ajanlekoko.png" />
@@ -88,10 +105,11 @@
                     need!</p>
                 <button class="button">
                     <div class="overlap-group">
-                        <div class="contact-us">Download</div>
+                        <div class="contact-us"><a style="text-decoration: none;" href="whitelist.html">Download</a></div>
                     </div>
                 </button>
             </div>
+            
             <div class="container">
                 <div class="divider"></div>
             </div>

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="assets/css/styleguide.css">
     <link rel="stylesheet" type="text/css", href="assets/css/custom.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="assets/img/mask-group.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;1,300;1,500&display=swap" rel="stylesheet">
-
     <title>Contact Us</title>
 </head>
     <body class="landing-page">
@@ -30,8 +30,8 @@
                     <a href="contact.html">Contact Us</a>
                     <a href="privacy.html">Privacy Policy</a>
                     <div class="sign-up-wrapper">
-                        <a href="whitelist.html"><button class="signup-button">Join the Waitlist</button></a>
-                            <!-- <div class="overlap-group"> -->
+                        <a href="whitelist.html"><button class="button-86">Join the Waitlist</button></a>
+                        <!-- <div class="overlap-group"> -->
                                 <!-- <div class="sign-up">Join the Waitlist</div> -->
                             <!-- </div> -->
                         <!-- </button> -->
@@ -42,7 +42,7 @@
         <!-- CONTACT MAIN -->
         <main class="container">
             <section class="contact-title">
-                <h2>Contact Us</h2>
+                <h2 class="">Contact Us</h2>
                 <p>
                     We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.
                 </p>
@@ -68,32 +68,48 @@
                         <tel>(833) 721-1054</tel>
                     </div>
                 </div>
+                <div class="vl"></div>
                 <div class="contact-input">
                     <div class="contact-form-wrapper">
-                        <form data="" method="post">
+                        <form action="https://formspree.io/f/mnnnapgz" data="" method="post">
+                            
                             <fieldset>
                                 <label>First Name</label>
-                                <input type="text" placeholder="First Name"/>
+                                <input type="text" id="first-name" name="first-name" placeholder="First Name"/>
                             </fieldset>
                             <fieldset>
                                 <label>Last Name</label>
-                                <input type="text" placeholder="Last Name"/>
+                                <input type="text" id="last-name" name="last-name" placeholder="Last Name"/>
                             </fieldset>
                             <fieldset>
                                 <label>Email Address</label>
-                                <input type="email" placeholder="joedoe@gmail.com"/>
+                                <input type="email" id="email" name="email" placeholder="joedoe@gmail.com"/>
                             </fieldset>
                             <fieldset>
                                 <label>Message</label>
-                                <input type="text" placeholder=""/>
+                                <input type="text" id="message" name="message" placeholder=""/>
                             </fieldset>
                             <fieldset >
-                                <button id="btn-submit" type="submit">Send</button>
+                                <button class="button-86" type="submit">Send</button>
                             </fieldset>
                         </form>
                     </div>
                 </div>
             </section>
+            <hr style="margin: 50px 0px;">
+            <div class="trusted-partners">
+                <h2>Trusted Partners</h2>
+                <div class="grid-container">
+                    <img src="assets/img/microsoft-azure.png" alt="microsoft-azure">
+                    <img src="assets/img/Google-Cloud.png" alt="Google-Cloud">
+                    <img src="assets/img/Nvidia.png" alt="Nvidia">
+                    <img src="assets/img/digitalocean.png" alt="digitalocean">
+                    <img src="assets/img/plaid.png" alt="plaid">
+                    <img src="assets/img/stripe.png" alt="stripe">
+                    <img src="assets/img/IBM.png" alt="IBM">
+                    <img src="assets/img/jp-morgan.png" alt="jpmorgan">
+                  </div>
+            </div>
         </main>
         <!-- FOOTER -->
         <footer class="credits">
@@ -109,10 +125,11 @@
                             need!</p>
                         <button class="button">
                             <div class="overlap-group">
-                                <div class="contact-us">Download</div>
+                                <div class="contact-us"><a style="text-decoration: none;" href="whitelist.html">Download</a></div>
                             </div>
                         </button>
                     </div>
+                    
                     <div class="container">
                         <div class="divider"></div>
                     </div>
