@@ -6,12 +6,13 @@
       <link rel="stylesheet" href="assets/css/style.css">
       <link rel="stylesheet" href="assets/css/styleguide.css">
       <link rel="stylesheet" href="assets/css/custom.css"/>
+      <link rel="shortcut icon" href="assets/img/mask-group.png" type="image/x-icon">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <title>About</title>
+      <title>About Us</title>
     </head>
     <body>
         <header class="container navbar">
-          <img class="mask-group" src="assets/img/mask-group.png" alt="Logo">
+          <a href="index.html"><img class="mask-group" src="assets/img/mask-group.png" alt="Logo"></a>
           <div class="menu-toggle" id="menu-toggle">
             <div class="bar"></div>
             <div class="bar"></div>
@@ -24,7 +25,7 @@
             <a href="contact.html">Contact Us</a>
             <a href="privacy.html">Privacy Policy</a>
             <div class="sign-up-wrapper">
-              <a href="whitelist.html"><button class="signup-button">Join the Waitlist</button></a>
+              <a href="whitelist.html"><button class="button-86">Join the Waitlist</button></a>
             </div>
           </nav>
         </header>
@@ -62,7 +63,7 @@
                     <div class="driving-force">
                         <div>
                             <div class="h-line-container"><div class="h-line" id="h-line-3"></div></div>
-                            <h2>Our Driving Force</h2>
+                            <h2 class="" >Our Driving Force</h2>
                             <div class="h-line-container"><div class="h-line" id="h-line-4"></div></div>
                         </div>
                         <div class="driving-force-top">
@@ -116,7 +117,6 @@
                     </div>
                 </section>  
 
-                <!-- ACCORDION SESSION -->
                 <section class="faq-section">
                     <div class="faq-wrapper">
                         <!-- FAQ CONTENT -->
@@ -128,32 +128,53 @@
                         </div>
                         <!-- ACCORDION -->
                         <div class="accordion">
-                            <!-- accordion 1 -->
+                            <!-- Accordion 1 -->
                             <div class="accordion-item">
-                                <p class="question">What services does GRRN provide?</p>
-                                <button>
-                                    <i class="fa fa-plus"></i>
-                                </button>
+                                <div class="accordion-header">
+                                    <p class="question">What services does GRRN provide?</p>
+                                    <button class="toggle-btn">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>GRRN is a pioneering fintech platform developing a comprehensive payment gateway to facilitate seamless financial transactions across regions. Leveraging innovative technology, GRRN simplifies complex processes with real-time cross-border payments, bulk settlements, and integration-friendly APIs, ensuring a smooth and efficient user experience. 
+                                        <br><br>
+                                      The platform empowers financial freedom by providing accessible, cost-effective tools that enable users to take control of their finances. Using cutting-edge technology like secure APIs, AI-driven risk assessments, and instant notifications, GRRN ensures reliable and secure transactions. Focused on inclusion, GRRN bridges financial gaps for underserved markets, fostering economic growth and expanding financial accessibility globally.</p>
+                                </div>
                             </div>
                             <!-- Accordion 2 -->
                             <div class="accordion-item">
-                                <p class="question">How does GRRN ensure the security of transactions?</p>
-                                <button>
-                                    <i class="fa fa-plus"></i>
-                                </button>
+                                <div class="accordion-header">
+                                    <p class="question">How does GRRN ensure the security of transactions?</p>
+                                    <button class="toggle-btn">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>GRRN ensures secure transactions with advanced technology, compliance, and robust systems. Authentication methods like OTP, MFA, and OAuth 2.0 protect user access and API requests. Data is safeguarded with TLS encryption and secure storage. AI-powered fraud detection and transaction monitoring identify and block suspicious activities in real-time. GRRN complies with KYC/AML standards and cross-border regulations, ensuring secure operations. <br><br>
+                                        APIs are token-protected, encrypted, and rate-limited to prevent misuse. Users can file disputes directly, with resolutions handled by a dedicated review team. Regular audits, updates, role-based access control, and partnerships with trusted institutions ensure secure settlements and reliable financial services.
+                                      </p>
+                                </div>
                             </div>
-                              <!-- Accordion 2 -->
-                              <div class="accordion-item">
-                                <p class="question">Who can benefit from using GRRN?</p>
-                                <button>
-                                    <i class="fa fa-plus"></i>
-                                </button>
+                            <!-- Accordion 3 -->
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <p class="question">Who can benefit from using GRRN?</p>
+                                    <button class="toggle-btn">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="accordion-content">
+                                    <p>
+                                        GRRN benefits a wide range of users by providing seamless, secure, and accessible financial solutions. Individuals, including expatriates, underserved communities, and freelancers, can use GRRN for instant, affordable money transfers, wallet management, loans, and international payments. SMEs benefit from GRRN's multi-currency tools, cross-border transactions, and streamlined payment processes.
+                                        <br><br>
+                                        Fintech platforms and developers can integrate GRRN's APIs to enhance financial services, while NGOs can distribute aid efficiently to underserved regions. Financial institutions and banks leverage GRRN's bulk settlements and payment gateway to expand offerings. Travelers gain real-time currency exchange and local cash pickup options, ensuring inclusive financial accessibility.
+                                      </p>
+                                </div>
                             </div>
-                          
                         </div>
                     </div>
                 </section>
-
                 <!-- CTA ACTION -->
                 <session class="cta-section">
                     <div class="cta-box">
@@ -166,11 +187,11 @@
                                 <div class="cta-store">
                                     <!-- APP STORE -->
                                     <div class="img-holder">
-                                        <img src="assets/img/app-store.png" alt="app store"/>
+                                        <img class="apple-store" src="assets/img/app-store.png" alt="app store"/>
                                     </div>
                                     <!-- GOGGLE STORE -->
                                     <div class="img-holder">
-                                        <img src="assets/img/google_store.png" alt="google store"/>
+                                        <img class="google-store" src="assets/img/google_store.png" alt="google store"/>
                                     </div>
                                 </div>
                             </div> 
@@ -186,37 +207,39 @@
         </main>
         <footer class="credits">
           <div class="frame-footer">
-            <div class="content">
-              <img class="mask-group" src="assets/img/mask-group.png" alt="Mask Group" />
-              <div class="links">
-                <p class="link">
-                  Empower Yourself with Customized Services and Insights Tailored to Help You Achieve Your
-                  Financial Goals—Live Life on Your Terms
-                </p>
-                <p class="text-wrapper">The first FinTech services you’ll love—and the last ones you’ll ever
-                  need!</p>
-                <button class="button">
-                  <div class="overlap-group">
-                    <div class="contact-us">Download</div>
+              <div class="content">
+                  <img class="mask-group" src="assets/img/mask-group.png" alt="Mask Group" />
+                  <div class="links">
+                      <p class="link">
+                          Empower Yourself with Customized Services and Insights Tailored to Help You Achieve Your
+                          Financial Goals—Live Life on Your Terms
+                      </p>
+                      <p class="text-wrapper">The first FinTech services you’ll love—and the last ones you’ll ever
+                          need!</p>
+                      <button class="button">
+                          <div class="overlap-group">
+                              <div class="contact-us"><a style="text-decoration: none;" href="whitelist.html">Download</a></div>
+                          </div>
+                      </button>
                   </div>
-                </button>
-              </div>
-              <div class="container">
-                <div class="divider"></div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <p class="text">© 2024 GRRN. All rights reserved.</p>
-                  <div class="social-links">
-                    <a href="https://www.x.com/grrn_io"><img class="img" src="assets/img/facebook.svg" alt="Facebook"></a>
-                    <a href="https://www. Instagram.com/grrn.io"><img class="img" src="assets/img/Instagram.svg" alt="Instagram"></a>
-                    <a href="https;//www.linkedin.com/company/grrn"><img class="img" src="assets/img/linkedin.svg" alt="LinkedIn"></a>
+                  
+                  <div class="container">
+                      <div class="divider"></div>
                   </div>
-                </div>
+                  <div class="container">
+                      <div class="row">
+                          <p class="text">© 2024 GRRN. All rights reserved.</p>
+                          <div class="social-links">
+                              <a href="https://www.x.com/grrn_io"><img class="img" src="assets/img/facebook.svg" alt="Facebook"></a>
+                              <a href="https://www. Instagram.com/grrn.io"><img class="img" src="assets/img/Instagram.svg" alt="Instagram"></a>
+                              <a href="https;//www.linkedin.com/company/grrn"><img class="img" src="assets/img/linkedin.svg" alt="LinkedIn"></a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </footer>
+      </footer>
         <script src="assets/js/script.js"></script>
+        <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-alpha.5/dist/webawesome.loader.js"></script>
     </body>
 </html>
